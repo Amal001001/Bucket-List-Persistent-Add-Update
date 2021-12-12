@@ -66,7 +66,10 @@ class ViewController: UITableViewController, AddItemTableViewControllerDelegate 
         }
     
     //function perform something to a clicked row
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "EditItemSegue", sender: indexPath)
-        }
+//        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            
+//        }
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        performSegue(withIdentifier: "EditItemSegue", sender: indexPath)
+    }
 }
