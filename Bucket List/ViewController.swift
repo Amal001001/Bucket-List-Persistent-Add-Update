@@ -20,16 +20,12 @@ class ViewController: UITableViewController, AddItemTableViewControllerDelegate 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddItemSegue" {
+        
            let navigationController = segue.destination as! UINavigationController
            let addItemTableVC = navigationController.topViewController as! addItemTableViewController
            addItemTableVC.delegate = self
-        }else if segue.identifier == "EditItemSegue" {
-            
-            let navigationController = segue.destination as! UINavigationController
-            let addItemTableVC = navigationController.topViewController as! addItemTableViewController
-            addItemTableVC.delegate = self
-            
+        
+        if sender is NSIndexPath {
             let indexPath = sender as! NSIndexPath
             let item = items[indexPath.row]
             addItemTableVC.item = item
@@ -70,6 +66,6 @@ class ViewController: UITableViewController, AddItemTableViewControllerDelegate 
 //            
 //        }
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        performSegue(withIdentifier: "EditItemSegue", sender: indexPath)
+        performSegue(withIdentifier: "ItemSegue", sender: indexPath)
     }
 }

@@ -33,12 +33,12 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="cuf-v4-V4J">
                         <barButtonItem key="rightBarButtonItem" title="+" id="sgg-aZ-CBM">
                             <connections>
-                                <segue destination="QDk-nm-aHO" kind="presentation" identifier="AddItemSegue" id="QG5-RF-cLl"/>
+                                <segue destination="QDk-nm-aHO" kind="presentation" identifier="ItemSegue" id="rYh-Qp-W9V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="QDk-nm-aHO" kind="presentation" identifier="EditItemSegue" id="z94-Ow-309"/>
+                        <segue destination="QDk-nm-aHO" kind="presentation" identifier="ItemSegue" id="ipl-DG-KPf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBp-Sx-1Jv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,7 +141,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="z94-Ow-309"/>
+        <segue reference="rYh-Qp-W9V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
